@@ -52,7 +52,7 @@ const List = props => {
     const prefixText = markdown.ordered ? `${i + 1}. ` : '\u2022 '
     return (
       <View style={{flexDirection:'row', flex: 1}} key={`list-el-${i}`}>
-        <Text>{prefixText}</Text>
+        <Text style={{fontSize: 16, lineHeight: 28, color: "#545454", fontFamily: "PingFang SC"}}>{prefixText}</Text>
         {child}
       </View>
     )
