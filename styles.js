@@ -1,62 +1,75 @@
-import { Platform } from 'react-native'
+import { Platform, Dimensions } from 'react-native'
+const { width } = Dimensions.get('screen')
 
 module.exports = {
   container: Platform.web ? { whiteSpace: 'pre' } : {},
   view: {},
-  blockquote_section: {
-    flexDirection: "row"
-  },
-  blockquote_section_bar: {
-    width: 3,
-    height: null,
-    backgroundColor: "#DDDDDD",
-    marginRight: 15
-  },
-  code: {
-    borderWidth: 1,
-    padding: 3,
-    borderColor: '#dddddd',
-    backgroundColor: '#eeeeee',
-    fontFamily: "Courier",
-    fontWeight: "500"
-  },
-  del: {
-    containerBackgroundColor: "#222222"
-  },
   em: {
     fontStyle: "italic"
   },
   heading: {
     fontWeight: "200"
   },
-  heading1: {
-    fontSize: 32
-  },
-  heading2: {
-    fontSize: 24
-  },
-  heading3: {
-    fontSize: 18
-  },
-  heading4: {
-    fontSize: 16
-  },
-  heading5: {
-    fontSize: 13
-  },
-  heading6: {
-    fontSize: 11
-  },
-  hr: {
-    backgroundColor: "#cccccc",
-    height: 1
-  },
   image: {
-    width: 320,
+    width: width - 30,
     height: 320
   },
+  text: {
+    color: '#545454',
+    lineHeight: 28,
+  },
+  list_text: {
+    fontFamily: "PingFang SC",
+    fontSize: 16,
+    color: '#545454',
+    lineHeight: 28,
+  },
+  list_link: {
+    fontFamily: 'PingFang SC',
+    fontSize: 16,
+    lineHeight: 28,
+    textDecorationLine: "none",
+    color: "#0056ff"
+  },
+  heading: {
+    color: '#3b3b3b',
+    fontWeight: '700',
+    marginTop: 16,
+    marginBottom: 8,
+    fontFamily: 'PingFang SC'
+  },
+  heading1: {
+    fontSize: 28,
+    lineHeight: 42
+  },
+  heading2: {
+    fontSize: 24,
+    lineHeight: 36
+  },
+  heading3: {
+    fontSize: 22,
+    lineHeight: 33
+  },
+  heading4: {
+    fontSize: 20,
+    lineHeight: 30
+  },
+  heading5: {
+    fontSize: 18,
+    lineHeight: 27
+  },
+  heading6: {
+    fontSize: 16,
+    lineHeight: 24
+  },
+  hr: {
+    backgroundColor: "#ededed",
+    height: 1,
+    marginTop: 8,
+    marginBottom: 24
+  },
   inline_code: {
-    backgroundColor: "#eeeeee",
+    backgroundColor: "#ededed",
     borderColor: "#dddddd",
     borderRadius: 3,
     borderWidth: 1,
@@ -64,13 +77,16 @@ module.exports = {
     fontWeight: "bold"
   },
   link: {
-    textDecorationLine: "underline"
+    textDecorationLine: "none",
+    color: "#0056ff"
   },
   list: {
-    paddingLeft: 10
+    paddingLeft: 10,
+    paddingRight: 15
   },
   list_item: {
-    flexDirection: "column"
+    flexDirection: "column",
+    fontSize: 16
   },
   list_item_bullet: {
     fontSize: 20,
@@ -84,8 +100,8 @@ module.exports = {
     textDecorationLine: "underline"
   },
   paragraph: {
-    marginTop: 10,
-    marginBottom: 10,
+    marginTop: 16,
+    marginBottom: 16,
     flexWrap: "wrap",
     flexDirection: "row",
     alignItems: "flex-start",
@@ -125,9 +141,6 @@ module.exports = {
   tablecell: {
     padding: 5
   },
-  text: {
-    color: "#222222"
-  },
   u: {
     borderColor: "#222222",
     borderBottomWidth: 1
@@ -135,5 +148,38 @@ module.exports = {
   video: {
     width: 300,
     height: 300
+  },
+  container: {
+    padding: 15,
+    paddingTop: 0,
+  },
+  blockquote_section: {
+    flexDirection: "row",
+  },
+  blockquote_section_bar: {
+    width: 3,
+    height: null,
+    backgroundColor: "#DDDDDD",
+    marginRight: 15
+  },
+  blockquote: {
+    padding: 24,
+    backgroundColor: '#fafafa'
+  },
+  code: {
+    fontFamily: "Courier",
+    fontWeight: "500"
+  },
+  del: {
+    containerBackgroundColor: "#222222"
+  },
+  space: {
+
+  },
+  br: {
+
+  },
+  html: {
+
   }
 }
